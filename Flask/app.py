@@ -26,7 +26,7 @@ def hello_world():
         db.session.commit()
         
     allTodo = Todo.query.all() 
-    return render_template('index.html', allTodo=allTodo)
+    return render_template('index.html', allTodo=allTodo).capitalize
 
 @app.route('/show')
 def products():
